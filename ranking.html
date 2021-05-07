@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+      <title>Skyscraper Ranking</title>
+      <link rel="stylesheet" href="css/ranking.css">
+      <link rel="stylesheet" href="css/menu.css">
+   </head>
+
+   <body>
+
+      <div class="top_bar">
+         <a href="Home">
+            <div class="logo">
+               <img class="logo_size" id="normal_logo_id" src="img/logo.png" alt="">
+               4 by 4 Skyscraper
+            </div>
+         </a>
+
+         <div class="categories">
+            <div class="grid_size_cetegory" id="4x4_rank_btn" onclick="change_ranking_table('4x4')">4x4</div>
+            <div class="grid_size_cetegory" id="5x5_rank_btn" onclick="change_ranking_table('5x5')">5x5</div>
+            <div class="grid_size_cetegory" id="6x6_rank_btn" onclick="change_ranking_table('6x6')">6x6</div>
+
+            <!-- onblur="close_menu()" -->
+            <div class="menu_button" tabindex="0" onclick="open_menu_onclick()" >
+               <img src="img/menu_80.png" alt="">
+            </div>
+         </div>
+      </div>
+
+      <!-- menu nie dziala prawidlowo, jest na razie tylko dla wygladu -->
+      <div class="right_side_menu" tabindex="0" onblur="close_menu()">
+         <div class="close_menu_btn">
+            <img src="img/w_close_50.png" alt="" onclick="close_menu()">
+         </div>
+
+         <a href="Home" target="_blank">Home page</a>
+         <a href="Game-4x4" target="_blank">4x4 Game</a>
+         <a href="Game-5x5" target="_blank">5x5 Game</a>
+         <a href="Game-6x6" target="_blank">6x6 Game</a>
+         <a href="instruction.html" target="_blank">Instruction</a>
+         <a href="Ranking" target="_blank">Ranking</a>
+
+         <div class="menu_footer">
+            <div class="menu_footer_content">
+               <div class="menu_item_highligth">Contact me</div>
+               <div class="part_string ">|</div>
+               <div class="menu_item_highligth">Facebook</div>
+               <div class="part_string ">|</div>
+               <div class="menu_item_highligth">Instagram</div>
+               <div class="part_string ">|</div>
+               <div class="menu_item_highligth">GitHub</div>
+            </div>
+         </div>
+
+      </div>
+
+
+      <div id="ranking_label_div"><h1 id=ranking_label_hed>Latest scores</h1></div>
+
+
+      <div class="ranking_container">
+
+         <table>
+
+            <colgroup>
+               <col class="five"/>
+               <col class="twenty-five"/>
+               <col class="fiveteen"/>
+               <col class="fiveteen"/>
+               <col class="fiveteen"/>
+               <col class="fiveteen"/>
+               <col class="fiveteen"/>
+            </colgroup>
+
+            <thead class="tc1 tc3 tc4 tc5 tc6 tc7">
+               <tr>
+                  <td id="rank_place_col">#</td>
+                  <td id="rank_name_col">Name</td>
+                  <td id="rank_points_col">Points</td>
+                  <td id="rank_time_col">Time</td>
+                  <td id="rank_attemps_col">Attemps</td>
+                  <td id="rank_date_col">Date</td>
+                  <td id="rank_last_col">Puzzle</td>
+               </tr>
+            </thead>
+            <tbody class="tc1 tml2 tc3 tc4 tc5 tc6 tc7" id="rank_table">
+               <!-- cialo tej tablei zmienia sie w zaleznosci od funkcji JSa -->
+
+
+
+            </tbody>
+         </table>
+
+      </div>
+
+      <footer>
+         <div class=""></div>
+      </footer>
+
+
+      <script src="scripts/jquery-min.js" charset="utf-8"></script>
+      <script src="scripts/ranking.js" type="text/javascript"></script>
+   </body>
+
+</html>

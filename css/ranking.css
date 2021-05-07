@@ -1,0 +1,148 @@
+body{
+   background-color: #111;
+}
+
+a{
+   text-decoration: none;
+}
+
+li{
+   list-style: none;
+}
+
+
+   /* TOP BAR */
+
+.top_bar{
+   display: flex;
+   justify-content: space-between;
+
+   margin: 0 9%;
+   margin-bottom: 100px;
+   margin-top: 25px;
+
+   color: white;
+   font-size: 40px;
+   line-height: 80px;
+
+}
+
+.logo{
+   color: white;
+   padding-right: 15px;
+   cursor: pointer;
+   display: flex;
+}
+
+.logo > img{
+   height: 80px;
+   width: 80px;
+   margin-right: 15px;
+}
+
+.categories{
+   display: flex;
+}
+
+
+.grid_size_cetegory{
+   font-size: 30px;
+   width: 100px;
+   height: 40px;
+   line-height: 40px;
+   margin: 20px 25px;
+   text-align: center;
+   border-radius: 3px;
+   border: 1px solid white;
+}
+
+.grid_size_cetegory:hover, .menu_button:hover{
+   cursor: pointer;
+   transform: scale(1.1);
+}
+
+.choosen_rank_type{
+   color: #111;
+   background-color: white;
+}
+
+.menu_button > img{
+   height: 50px;
+   width: 50px;
+   margin: 15px 0 0 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   /* RANKING CONTAINER */
+
+#ranking_label_div{
+   color: white;
+   font-size: 40px;
+   text-align: center;
+}
+
+.ranking_container{
+   display: flex;
+   justify-content: center;
+}
+
+table{
+   width:80%;
+   border: 1px solid yellow;
+   color: white;
+   font-size: 20px;
+   padding: 15px 0;
+}
+
+
+thead td{
+   font-size: 30px;
+   color: white;
+   padding: 10px 0 25px 0;
+}
+
+/* COLUMNS PROPERTIES */
+.five{ width: 5%; }
+.ten{ width: 10%; }
+.twenty-five{ width: 20%; }
+.fiveteen{ width: 15%; }
+.center{ text-align: center;}
+
+.tc1 td:nth-child(1), .tc1 th:nth-child(1),
+.tc2 td:nth-child(2), .tc2 th:nth-child(2),
+.tc3 td:nth-child(3), .tc3 th:nth-child(3),
+.tc4 td:nth-child(4), .tc4 th:nth-child(4),
+.tc5 td:nth-child(5), .tc5 th:nth-child(5),
+.tc6 td:nth-child(6), .tc6 th:nth-child(6),
+.tc7 td:nth-child(7), .tc7 th:nth-child(7),
+.tc8 td:nth-child(8), .tc8 th:nth-child(8),
+.tc9 td:nth-child(9), .tc9 th:nth-child(9) { text-align:center }
+
+.tml2 td:nth-child(2), .tml2 th:nth-child(2) { padding: 0 10px}
+
+
+
+tbody > tr:hover{
+   background-color: lightblue;
+   color: #111;
+   /* cursor: pointer; */
+}
+
+tbody td{
+   padding: 5px 0;
+}
+
+
+footer{
+   height: 200px;
+}

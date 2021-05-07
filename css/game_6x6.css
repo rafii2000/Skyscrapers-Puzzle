@@ -1,0 +1,528 @@
+
+   /* PUZZLE GRID */
+
+.game{
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 90px;
+}
+
+
+
+
+
+
+.size_6x6{
+   margin: auto 0;
+   display: grid;
+
+   row-gap: 3px;
+   column-gap: 3px;
+
+   display: grid;
+   grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px;
+
+   position: relative;
+}
+
+.cell{
+   background-color: grey;
+   border: 1px solid grey;
+}
+
+.clue{
+   background-color: lightgrey;
+   border: 1px solid lightgrey;
+   font-family: 'Roboto';
+}
+
+
+
+.cell, .clue{
+   height: 78px;
+   width: 78px;
+   line-height: 78px;
+   text-align: center;
+   font-size: 37px;
+}
+
+
+
+
+
+.cell:hover{
+   cursor: pointer;
+}
+
+.yellow_border{
+   border: 1px solid yellow;
+}
+
+
+
+
+
+
+
+   /* GAME BUTTONS BOARD */
+
+.buttons_container{
+   background-color: #111;
+   display: flex;
+   flex-direction: column;
+
+}
+
+/* .wrap{
+   width: 475px;
+   flex-direction: row;
+   flex-wrap: wrap;
+} */
+
+
+
+.button{
+   height: 100px;
+   width: 200px;
+   line-height: 100px;
+   background-color: lightgrey;
+
+   font-size: 30px;
+   font-weight: 700;
+
+   letter-spacing: 2px;
+   color: white;
+   text-align: center;
+   border-radius: 10px;
+   margin: 15px;
+
+   opacity: 60%;
+
+   display: flex;
+   justify-content: space-around;
+   position: relative;
+}
+
+#level_btn{
+   cursor: not-allowed;
+}
+
+#grid_size_option_DESKTOP > a, #grid_size_MOBILE > a{
+   color: white;
+}
+
+#check_grid_MOBILE{
+   display: none;
+}
+
+
+
+#grid_size_option_DESKTOP, #grid_size_MOBILE{
+   display: none;
+}
+
+#delete_btn{
+   /* background-color: #111;
+   border: 2px solid white; */
+}
+
+
+#delete_MOBILE{
+   display: none;
+}
+
+
+
+.size:hover{
+   /* color: #ADFF2F;
+   color: #9ACD32; */
+   color: #111;
+}
+
+
+.button:hover{
+   opacity: 1;
+   cursor: pointer;
+}
+
+
+.floor{
+   width: 10px;
+   height: 10px;
+   margin: 2px auto;
+}
+
+
+.floor_wraper{
+   position: absolute;
+   bottom: 2px;
+}
+
+
+.floor1, .floor2, .floor3, .floor4, .floor5, .floor6{
+   width: 19px;
+}
+
+
+.color1{ background-color: #628395; }
+.color2{ background-color: #96897b; }
+.color3{ background-color: #dfd5a5; }
+.color4{ background-color: #dbad6a; }
+.color5{ background-color: #cf995f; }
+.color6{ background-color: #4c3721; }
+/* .color_del{ background-color: #708090; } */
+
+.f1{ border: 2px solid #FFF; }
+.f2{ border: 2px solid #FFF; }
+.f3{ border: 2px solid #FFF; }
+.f4{ border: 2px solid #FFF; }
+.f5{ border: 2px solid #FFF; }
+.f6{ border: 2px solid #FFF; }
+
+
+
+
+
+   /* VIEWPORT FOR LAPTOPS */
+
+@media screen and (max-height: 768px), screen and (max-width: 1300px){
+   .top_bar{
+      margin-bottom: 65px;
+      font-size: 40px;
+      line-height: 65px;
+   }
+
+   .logo > img{
+      height: 65px;
+      width: 65px;
+   }
+
+
+   #timer{
+      line-height: 65px;
+   }
+
+   .size_6x6{
+      /* width: 495px;
+      height: 495px; */
+
+      grid-template-columns: 70px 70px 70px 70px 70px 70px 70px 70px;
+   }
+
+   .cell, .clue{
+      height: 68px;
+      width: 68px;
+
+      line-height: 68px;
+      font-size: 35px;
+   }
+
+   .button{
+      height: 90px;
+      width: 180px;
+      line-height: 90px;
+
+      font-size: 30px;
+      font-weight: 700;
+   }
+
+   /* .play, .pause, .reset{
+      top: 30%;
+   } */
+
+   .floor{
+      width: 14px;
+      height: 14px;
+      margin-bottom: 0px;
+      margin-top: 3px;
+   }
+
+   .floor_wraper{
+      bottom: 4px;
+   }
+
+}
+
+
+
+   /* VIEWPORT FOR TABLETS */
+
+@media screen and (max-height: 668px), screen and (max-width: 1050px){
+   .top_bar{
+      margin-bottom: 50px;
+      font-size: 38px;
+      line-height: 50px;
+   }
+
+   .logo > img{
+      height: 50px;
+      width: 50px;
+   }
+
+
+   #timer{
+      line-height: 50px;
+   }
+
+
+   .size_6x6{
+
+      row-gap: 2px;
+      column-gap: 2px;
+      grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px;
+   }
+
+   .cell, .clue{
+      height: 58px;
+      width: 58px;
+
+      line-height: 58px;
+      font-size: 30px;
+   }
+
+   .button{
+      height: 75px;
+      width: 150px;
+      line-height: 75px;
+
+      font-size: 25px;
+      font-weight: 700;
+   }
+
+
+   .floor{
+      width: 10px;
+      height: 10px;
+      margin-bottom: 0px;
+      margin-top: 3px;
+   }
+
+   .floor_wraper{
+      bottom: 4px;
+   }
+
+}
+
+
+/* LANDSCAPE VIEWPORT FOR MOBILES */
+
+@media screen and (max-width: 900px){
+
+   .top_bar{
+      width: 80%;
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .game{
+      flex-direction: column;
+   }
+
+   .size_6x6{
+      margin: 0px auto;
+      margin-bottom: 50px;
+      order: -1;
+   }
+
+   .buttons_container{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .buttons_container:first-child{
+      /* border-bottom: 2px dashed white; */
+      margin-bottom: 30px;
+   }
+
+   .button{
+      height: 75px;
+      width: 150px;
+      line-height: 75px;
+      margin: 10px 15px;
+      /* padding: 0 10px; */
+
+      font-size: 25px;
+   }
+
+   #check_grid_MOBILE{
+      display: block;
+   }
+
+   #check_grid_DESKTOP{
+      display: none;
+   }
+
+
+}
+
+@media screen and (max-width: 650px){
+   .top_bar{
+      font-size: 29px;
+   }
+
+   .size_6x6{
+
+      row-gap: 2px;
+      column-gap: 2px;
+      grid-template-columns: 55px 55px 55px 55px 55px 55px 55px 55px;
+   }
+
+   .cell, .clue{
+      height: 53px;
+      width: 53px;
+
+      line-height: 53px;
+      font-size: 30px;
+   }
+}
+
+@media screen and (max-width: 500px){
+
+   .buttons_container{
+      width: 67%;
+      margin: 0 auto;
+   }
+
+   .top_bar{
+      width: 88%;
+      margin-bottom: 40px;
+      font-size: 21px;
+      line-height: 40px;
+   }
+
+   .logo > img{
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+   }
+
+
+   #timer{
+      line-height: 40px;
+   }
+
+   #pause_timer > img{
+      width: 35px;
+      height: 35px;
+
+      position: absolute;
+      top: calc(50% - 17.5px);
+      left: calc(50% - 17.5px);
+   }
+
+   .size_6x6{
+
+      grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px;
+   }
+
+   .cell, .clue{
+      height: 38px;
+      width: 38px;
+
+      line-height: 38px;
+      font-size: 23px;
+   }
+
+   .button{
+      height: 45px;
+      width: 90px;
+      line-height: 45px;
+
+      font-size: 19px;
+      font-weight: 700;
+
+      border-radius: 7px;
+   }
+
+   #new_game_btn{
+      width: 210px;
+   }
+
+   /* zmienione wyswietlanie grid_size */
+
+   #grid_size_DESKTOP, #grid_size_option_DESKTOP{
+      display: none;
+   }
+
+   #grid_size_MOBILE{
+      width: 210px;
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .size{
+      margin-top: 7.5px;
+      line-height: 30px;
+      width: 60px;
+      border-radius: 7px;
+      background-color: lightgrey;
+   }
+
+   #delete_DESKTOP{
+      display: none;
+   }
+   #delete_MOBILE{
+      display: flex;
+   }
+
+   #ranking_btn, #level_btn{
+      display: none;
+   }
+
+
+   .floor1, .floor2, .floor3, .floor4, .floor5, .floor6{
+      display: none;
+   }
+
+}
+
+
+@media screen and (max-width: 360px){
+   .buttons_container{
+      width: 95%;
+      margin: 0 auto;
+   }
+
+   .top_bar{
+      width: 88%;
+      margin-bottom: 35px;
+      font-size: 16px;
+      line-height: 35px;
+   }
+
+   .logo > img{
+      height: 35px;
+      width: 35px;
+      margin-right: 10px;
+   }
+
+   #timer{
+      line-height: 35px;
+   }
+
+   .size_6x6{
+      /* width: 250px;
+      height: 250px; */
+
+
+      grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px;
+   }
+
+   .cell, .clue{
+      height: 28px;
+      width: 28px;
+
+      line-height: 28px;
+      font-size: 18px;
+   }
+
+}
+
+
+@media screen and (max-width: 280px){
+
+}
